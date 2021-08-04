@@ -812,7 +812,8 @@ function gui_process(dataFileLocation,dataFileName, removeArrhythm, isi,...
     save_struct.rsp_startTime_RQI = rsp_startTime_RQI;
     
     % Finally, save these variables :)
-    parsave([dataFileLocation, filesep, saveFileName], save_struct);
+  parsave([dataFileLocation, filesep, saveFileName], save_struct);
+  disp(['Processing Complete. Processed data located at ' dataFileLocation, filesep, saveFileName])
     
     
     %% Store data removal statistics and such in summary arrays
