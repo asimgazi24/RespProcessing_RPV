@@ -60,13 +60,13 @@ for i = 1:size(rsp_windowed, 1)
     % different sampling frequencies)
     
     % Compute the sums necessary for numerator
-    sums = zeros(30, 1);
-    for k = 3:32
+    sums = zeros(14, 1);
+    for k = 3:16
         sums(k-2) = psd_rsp(k) + psd_rsp(k+1);
     end
     
-    % Respiration frequencies are only present in elements 3-33
-    RQI_psd(i) = max(sums)/sum(psd_rsp(3:33));
+    % Respiration frequencies are only present in elements 3-17
+    RQI_psd(i) = max(sums)/sum(psd_rsp(3:17));
 end
 
 % We next compute the RQI based on autocorrelation of the signal at lags
