@@ -17,6 +17,7 @@ Physiological measurement, vol. 39, no. 10, 2018.
 Please see the original PhysioNet Cardiovascular Signal Toolbox repository for questions specifically related to ECG processing and HRV extraction: 
 https://github.com/cliffordlab/PhysioNet-Cardiovascular-Signal-Toolbox
 
+
 Loaded Variables:
 (option given to allow for only one or the other, instead of both)
 ecg - N x 1 array of ECG datapoints
@@ -97,5 +98,3 @@ rsp_endTime_pk - end time used for respiration peak detection (used for chopping
 rsp_endTime_RQI - end time used for RQI (used for chopping and aligning all signals)
 rsp_startTime_pk - start time used for respiration peak detection (used for chopping and aligning all signals)
 rsp_startTime_RQI - start time used for RQI (used for chopping and aligning all signals)
-
-
