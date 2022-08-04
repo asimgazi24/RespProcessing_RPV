@@ -1,5 +1,6 @@
 # RespProcessing_RPV
 
+## References
 Code associated with the following journal article on respiration signal processing and robust estimation of respiration pattern variability (RPV):
 
 A. H. Gazi et al., "Robust Estimation of Respiratory Variability Uncovers Correlates of Limbic Brain Activity and Transcutaneous Cervical Vagus Nerve Stimulation in the Context of Traumatic Stress," in IEEE Transactions on Biomedical Engineering, vol. 69, no. 2, pp. 849-859, Feb. 2022, doi: 10.1109/TBME.2021.3108135.
@@ -15,7 +16,7 @@ https://github.com/cliffordlab/PhysioNet-Cardiovascular-Signal-Toolbox
 
 
 
-# Variable Descriptions
+## Variable Descriptions
 Loaded Variables:<br/>
 (option given to allow for only one or the other, instead of both)<br/>
 ecg - N x 1 array of ECG datapoints<br/>
