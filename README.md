@@ -16,14 +16,10 @@ https://github.com/cliffordlab/PhysioNet-Cardiovascular-Signal-Toolbox
 When formatting your .mat file for processing, please ensure the following variables are included: <br/>
 `ecg`: N x 1 array of ECG datapoints<br/>
 `rsp`: N x 1 array of RSP datapoints<br/>
-`subjectID`: unique identifier for this data file to keep separate from others<br/>
 
 You will also need either an intersample interval in milliseconds or sampling frequency in Hz: <br/>
 `isi`: intersample interval in milliseconds<br/>
 `Fs`: sampling frequency in Hz<br/>
-
-(below is optional)<br/>
-`atrialFib`: true/false whether subject has known atrial fibrillation<br/>
 
 ## Using the Tool
 ### Dependencies
@@ -31,14 +27,14 @@ MATLAB <br/>
 MATLAB toolboxes: Signal Processing Toolbox, Deep Learning Toolbox, and Statistics and Machine Learning Toolbox
 
 ### Quick Start 
-Run `RespGui.mlapp` (if you double click on the file with MATLAB open, you might open the editing view; close, right click, and select Run). `RespGui.mlapp` calls the `gui_process.m` function, so if you would like to understand the code better, inspect the gui_process function.
+Run `RespGui.mlapp` (if you double click on the file with MATLAB open, you might open the editing view; close, right click, and select Run). Select the button `Choose Filepath` and select the file(s) you would like to process. Once you are done selecting files, click the `Run Processing` button. This will use the default thresholds for processing, corresponding to the thresholds described in Gazi et al., _IEEE TBME_, 2022.
 
 ### Modifying Parameters
-
+If you would like to change the processing parameters, select the checkbox next to `I want to edit processing parameters`. This will allow you to edit parameters as desired. We suggest reporting the parameters changed when publishing any resultant work in the interest of reproducibility. If separate parameters are used for separate sets of data, a table including the datasets (e.g., participant numbers) and the parameters used is recommended as supplementary material.
 
 ### For more details...
+`RespGui.mlapp` calls the `gui_process.m` function, so if you would like to understand the code better, inspect the gui_process function. <br/>
 All constituent functions are organized under the folders 'Processing_Functions' or 'Supporting_Functions'. See function code for methodological details.
-
 
 ## Description of Saved Variables
 ### Main Output
