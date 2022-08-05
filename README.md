@@ -27,7 +27,7 @@ MATLAB <br/>
 MATLAB toolboxes: Signal Processing Toolbox, Deep Learning Toolbox, and Statistics and Machine Learning Toolbox
 
 ### Quick Start 
-Run `RespGui.mlapp` (if you double click on the file with MATLAB open, you might open the editing view; close, right click, and select Run). Select the button `Choose Filepath` and select the file(s) you would like to process. Once you are done selecting files, click the `Run Processing` button. This will use the default thresholds for processing, corresponding to the thresholds described in Gazi et al., _IEEE TBME_, 2022.
+Run `RespGui.mlapp` (if you double click on the file with MATLAB open, you might open the editing view; close, right click, and select Run). Select the button `Choose Filepath` and select the file(s) you would like to process. Once you are done selecting files, click the `Run Processing` button. This will use the default thresholds for processing, corresponding to the thresholds described in [Gazi et al., _IEEE TBME_, 2022](https://doi.org/10.1109/tbme.2021.3108135).
 
 ### Modifying Parameters
 If you would like to change the processing parameters, select the checkbox next to `I want to edit processing parameters`. This will allow you to edit parameters as desired. We suggest reporting the parameters changed when publishing any resultant work in the interest of reproducibility. If separate parameters are used for separate sets of data, a table including the datasets (e.g., participant numbers) and the parameters used is recommended as supplementary material.
