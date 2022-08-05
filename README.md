@@ -26,13 +26,17 @@ Fs - sampling frequency in Hz<br/>
 atrialFib - true/false whether subject has known atrial fibrillation<br/>
 
 ## Using the Tool
-Dependencies: <br/>
+### Dependencies
 MATLAB <br/>
 MATLAB toolboxes: Signal Processing Toolbox, Deep Learning Toolbox, and Statistics and Machine Learning Toolbox
 
-To Run: <br/>
+### Quick Start 
 Run RespGui.mlapp (double click with MATLAB open). RespGui.mlapp calls the gui_process.m function, so if you would like to understand the code better, inspect the gui_process function.
 
+### Modifying Parameters
+
+
+### For more details...
 All constituent functions are organized under the folders 'Processing_Functions' or 'Supporting_Functions'. See function code for methodological details.
 
 
