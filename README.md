@@ -34,7 +34,11 @@ Signal Processing Toolbox Deep Learning Toolbox Statistics and Machine Learning 
 
 Also make sure all folders and subfolders are added to path (i.e. Tools, Necessary Repositories, HRV_Output and folder path to files to process)
 
-To Run: Double click executeGui.mlapp executeGui.mlapp calls the gui_process.m function, so if you want to understand the code better, inspect the gui_process function.
+To Run: 
+
+Double click RespGui.mlapp RespGui.mlapp calls the gui_process.m function, so if you want to understand the code better, inspect the gui_process function.
+
+All constituent functions are organized under the folders 'Processing_Functions' or 'Supporting_Functions'. See function code for methodological details.
 
 
 ## Description of Saved Variables
