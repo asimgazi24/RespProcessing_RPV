@@ -31,6 +31,14 @@ data_struct = load([dataFileLocation, filesep, dataFileName]);
 ecg = data_struct.ecg;
 rsp = data_struct.rsp;
 
+if isfield(data_struct, 'isi')
+    isi = data_struct.isi;
+end
+if isfield(data_struct, 'Fs')
+    Fs = data_struct.Fs;
+end
+
+
 %% Initialize HRVparams for PhysioNet Cardiovascular Signal Toolbox
 % Because we may use a parfor looop, we need to initialize the struct
 % within each iteration of the loop
@@ -100,7 +108,9 @@ HRVparams.HRT.on = 0;
 
 % Store sampling frequency as reciprocal of intersample interval
 % multiply by 1000 b/c isi_units is in milliseconds
-Fs = (1/isi)*1000;
+if exist('isi', 'var')
+    Fs = (1/isi)*1000;
+end
 
 HRVparams.Fs = Fs;
 
@@ -684,6 +694,9 @@ end
 [physFeatures_RPV.RR_RMSSD, ~] = ...
     RMS_succ_diff(physFeatures_resp.RR, RPV_windows, mean_IBI);
 
+[physFeatures_RPV.RR_IQR, ~] = ...
+    interQuart_range(physFeatures_resp.RR, RPV_windows, mean_IBI);
+
 % Ti
 [physFeatures_RPV.Ti_CV, RPV_wind_rmvd_Ti] = ...
     coeff_var(physFeatures_resp.Ti, RPV_windows, mean_IBI);
@@ -697,6 +710,9 @@ end
 [physFeatures_RPV.Ti_RMSSD, ~] = ...
     RMS_succ_diff(physFeatures_resp.Ti, RPV_windows, mean_IBI);
 
+[physFeatures_RPV.Ti_IQR, ~] = ...
+    interQuart_range(physFeatures_resp.Ti, RPV_windows, mean_IBI);
+
 % Te
 [physFeatures_RPV.Te_CV, RPV_wind_rmvd_Te] = ...
     coeff_var(physFeatures_resp.Te, RPV_windows, mean_IBI);
@@ -709,6 +725,9 @@ end
 
 [physFeatures_RPV.Te_RMSSD, ~] = ...
     RMS_succ_diff(physFeatures_resp.Te, RPV_windows, mean_IBI);
+
+[physFeatures_RPV.Te_IQR, ~] = ...
+    interQuart_range(physFeatures_resp.Te, RPV_windows, mean_IBI);
 
 
 % Just in case I want to know how much respiration data I used/removed
