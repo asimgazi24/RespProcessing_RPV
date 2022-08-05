@@ -28,7 +28,7 @@ atrialFib - true/false whether subject has known atrial fibrillation<br/>
 ## Using the Tool
 Dependencies: <br/>
 MATLAB <br/>
-Signal Processing Toolbox, Deep Learning Toolbox, and Statistics and Machine Learning Toolbox
+MATLAB toolboxes: Signal Processing Toolbox, Deep Learning Toolbox, and Statistics and Machine Learning Toolbox
 
 To Run: <br/>
 Run RespGui.mlapp (double click with MATLAB open). RespGui.mlapp calls the gui_process.m function, so if you would like to understand the code better, inspect the gui_process function.
