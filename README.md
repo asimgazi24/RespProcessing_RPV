@@ -31,7 +31,7 @@ MATLAB <br/>
 MATLAB toolboxes: Signal Processing Toolbox, Deep Learning Toolbox, and Statistics and Machine Learning Toolbox
 
 ### Quick Start 
-Run `RespGui.mlapp`. `RespGui.mlapp` calls the `gui_process.m` function, so if you would like to understand the code better, inspect the gui_process function.
+Run `RespGui.mlapp` (if you double click on the file with MATLAB open, you might open the editing view; close, right click, and select Run). `RespGui.mlapp` calls the `gui_process.m` function, so if you would like to understand the code better, inspect the gui_process function.
 
 ### Modifying Parameters
 
