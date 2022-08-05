@@ -13,24 +13,32 @@ Please see the original PhysioNet Cardiovascular Signal Toolbox (PCST) repositor
 https://github.com/cliffordlab/PhysioNet-Cardiovascular-Signal-Toolbox
 
 
+## Preparing your data
 
-
-
-## Variable Descriptions
-Loaded Variables:<br/>
-(option given to allow for only one or the other, instead of both)<br/>
+When formatting your .mat file for processing, please ensure the following variables are included: <br/>
 ecg - N x 1 array of ECG datapoints<br/>
 rsp - N x 1 array of RSP datapoints<br/>
-(one of the below is needed)<br/>
+subjectID - unique identifier for this data file to keep separate from others<br/>
+
+You will also need either an intersample interval in milliseconds or sampling frequency in Hz: <br/>
 isi - intersample interval in milliseconds<br/>
 Fs - sampling frequency in Hz<br/>
-subjectID - unique identifier for this data file to keep separate from others<br/>
+
 (below is optional)<br/>
 atrialFib - true/false whether subject has known atrial fibrillation<br/>
 
+## Using the tool
+Dependencies:
 
-Saved Variables:<br/>
- ----- Main Output ------<br/>
+Signal Processing Toolbox Deep Learning Toolbox Statistics and Machine Learning Toolbox
+
+Also make sure all folders and subfolders are added to path (i.e. Tools, Necessary Repositories, HRV_Output and folder path to files to process)
+
+To Run: Double click executeGui.mlapp executeGui.mlapp calls the gui_process.m function, so if you want to understand the code better, inspect the gui_process function.
+
+
+## Description of Saved Variables
+### Main Output
 physFeatures_beat - Struct that stores beat-by-beat feature arrays in each field, where each array is 2-D with times as first column and feature values in second<br/>
 physFeatures_HRV - Struct that stores windowed heart rate variability arrays in each field, where each array is 3-D with window start time as first column, window end time as second column, and feature value as third<br/>
 physFeatures_resp - Struct that stores breath-by-breath feature arrays in each field, where each array is 2-D with times as first column and feature values in second<br/>
@@ -38,7 +46,7 @@ physFeatures_RPV - Struct that stores windowed respiration pattern variability a
 subjectID - unique identifier given to this dataset (usually corresponding to a recording for a subject)<br/>
 
 
------ Summary Arrays -----<br/>
+### Summary Arrays
 percentRmvd_array_ecg - 1-D array storing the percent removed of ECG data from the recordings provided for each data file; ordered corresponding to ordering of data files / subject IDs<br/>
 percentRmvd_array_rsp - 1-D array storing the percent removed of RSP data from the recordings provided for each data file; ordered corresponding to ordering of data files / subject IDs<br/>
 RPV_wind_rmvd_RR - 1-D array storing the number of respiration rate-based RPV windows removed from the recordings provided for each data file; ordered corresponding to ordering of data files / subject IDs<br/>
@@ -46,7 +54,7 @@ RPV_wind_rmvd_Ti - 1-D array storing the number of inspiration time-based RPV wi
 RPV_wind_rmvd_Te - 1-D array storing the number of expiration time-based RPV windows removed from the recordings provided for each data file; ordered corresponding to ordering of data files / subject IDs<br/>
 
 
------- Extra Info --------<br/>
+### Extra Debugging Information
 cleanTimes_rsp - 1-D array storing approximated times corresponding to clean respiration data<br/>
 Fs - sampling frequency of data in Hz<br/>
 flagged_respRate - elements of fused IBIs and onsets that were flagged for outlier respiration rates<br/>
