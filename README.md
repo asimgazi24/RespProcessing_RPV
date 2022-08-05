@@ -1,6 +1,6 @@
 # RespProcessing_RPV
 
-## References
+## Resources
 Code associated with the following journal article on respiration signal processing and robust estimation of respiration pattern variability (RPV): <br/>
 A. H. Gazi et al., "Robust Estimation of Respiratory Variability Uncovers Correlates of Limbic Brain Activity and Transcutaneous Cervical Vagus Nerve Stimulation in the Context of Traumatic Stress," in IEEE Transactions on Biomedical Engineering, vol. 69, no. 2, pp. 849-859, Feb. 2022, doi: 10.1109/TBME.2021.3108135.
 
@@ -11,7 +11,7 @@ Please see the original PhysioNet Cardiovascular Signal Toolbox (PCST) repositor
 https://github.com/cliffordlab/PhysioNet-Cardiovascular-Signal-Toolbox
 
 
-## Preparing your data
+## Preparing Your Data
 
 When formatting your .mat file for processing, please ensure the following variables are included: <br/>
 ecg - N x 1 array of ECG datapoints<br/>
@@ -25,7 +25,7 @@ Fs - sampling frequency in Hz<br/>
 (below is optional)<br/>
 atrialFib - true/false whether subject has known atrial fibrillation<br/>
 
-## Using the tool
+## Using the Tool
 Dependencies: <br/>
 Signal Processing Toolbox, Deep Learning Toolbox, and Statistics and Machine Learning Toolbox
 
