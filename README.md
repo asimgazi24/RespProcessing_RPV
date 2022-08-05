@@ -14,16 +14,16 @@ https://github.com/cliffordlab/PhysioNet-Cardiovascular-Signal-Toolbox
 ## Preparing Your Data
 
 When formatting your .mat file for processing, please ensure the following variables are included: <br/>
-ecg - N x 1 array of ECG datapoints<br/>
-rsp - N x 1 array of RSP datapoints<br/>
-subjectID - unique identifier for this data file to keep separate from others<br/>
+`ecg`: N x 1 array of ECG datapoints<br/>
+`rsp`: N x 1 array of RSP datapoints<br/>
+`subjectID`: unique identifier for this data file to keep separate from others<br/>
 
 You will also need either an intersample interval in milliseconds or sampling frequency in Hz: <br/>
-isi - intersample interval in milliseconds<br/>
-Fs - sampling frequency in Hz<br/>
+`isi`: intersample interval in milliseconds<br/>
+`Fs`: sampling frequency in Hz<br/>
 
 (below is optional)<br/>
-atrialFib - true/false whether subject has known atrial fibrillation<br/>
+`atrialFib`: true/false whether subject has known atrial fibrillation<br/>
 
 ## Using the Tool
 ### Dependencies
@@ -31,7 +31,7 @@ MATLAB <br/>
 MATLAB toolboxes: Signal Processing Toolbox, Deep Learning Toolbox, and Statistics and Machine Learning Toolbox
 
 ### Quick Start 
-Run RespGui.mlapp (double click with MATLAB open). RespGui.mlapp calls the gui_process.m function, so if you would like to understand the code better, inspect the gui_process function.
+Run `RespGui.mlapp` (double click with MATLAB open). `RespGui.mlapp` calls the `gui_process.m` function, so if you would like to understand the code better, inspect the gui_process function.
 
 ### Modifying Parameters
 
@@ -42,11 +42,11 @@ All constituent functions are organized under the folders 'Processing_Functions'
 
 ## Description of Saved Variables
 ### Main Output
-physFeatures_beat: Struct that stores beat-by-beat feature arrays in each field, where each array is 2-D with times as first column and feature values in second<br/>
-physFeatures_HRV: Struct that stores windowed heart rate variability arrays in each field, where each array is 3-D with window start time as first column, window end time as second column, and feature value as third<br/>
-physFeatures_resp: Struct that stores breath-by-breath feature arrays in each field, where each array is 2-D with times as first column and feature values in second<br/>
-physFeatures_RPV: Struct that stores windowed respiration pattern variability arrays in each field, where each array is 3-D with window start time as first column, window end time as second column, and feature value as third<br/>
-subjectID: unique identifier given to this dataset (usually corresponding to a recording for a subject)<br/>
+`physFeatures_beat`: Struct that stores beat-by-beat feature arrays in each field, where each array is 2-D with times as first column and feature values in second<br/>
+`physFeatures_HRV`: Struct that stores windowed heart rate variability arrays in each field, where each array is 3-D with window start time as first column, window end time as second column, and feature value as third<br/>
+`physFeatures_resp`: Struct that stores breath-by-breath feature arrays in each field, where each array is 2-D with times as first column and feature values in second<br/>
+`physFeatures_RPV`: Struct that stores windowed respiration pattern variability arrays in each field, where each array is 3-D with window start time as first column, window end time as second column, and feature value as third<br/>
+`subjectID`: unique identifier given to this dataset (usually corresponding to a recording for a subject)<br/>
 
 
 ### Summary Arrays
