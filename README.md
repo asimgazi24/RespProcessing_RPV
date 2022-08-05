@@ -26,14 +26,10 @@ Fs - sampling frequency in Hz<br/>
 atrialFib - true/false whether subject has known atrial fibrillation<br/>
 
 ## Using the tool
-Dependencies:
+Dependencies: <br/>
+Signal Processing Toolbox, Deep Learning Toolbox, and Statistics and Machine Learning Toolbox
 
-Signal Processing Toolbox Deep Learning Toolbox Statistics and Machine Learning Toolbox
-
-Also make sure all folders and subfolders are added to path (i.e. Tools, Necessary Repositories, HRV_Output and folder path to files to process)
-
-To Run: 
-
+To Run: <br/>
 Double click RespGui.mlapp RespGui.mlapp calls the gui_process.m function, so if you want to understand the code better, inspect the gui_process function.
 
 All constituent functions are organized under the folders 'Processing_Functions' or 'Supporting_Functions'. See function code for methodological details.
