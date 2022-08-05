@@ -27,6 +27,7 @@ atrialFib - true/false whether subject has known atrial fibrillation<br/>
 
 ## Using the Tool
 Dependencies: <br/>
+MATLAB <br/>
 Signal Processing Toolbox, Deep Learning Toolbox, and Statistics and Machine Learning Toolbox
 
 To Run: <br/>
