@@ -33,7 +33,7 @@ Run `RespGui.mlapp` (if you double click on the file with MATLAB open, you might
 If you would like to change the processing parameters, select the checkbox next to `I want to edit processing parameters`. This will allow you to edit parameters as desired. We suggest reporting the parameters changed when publishing any resultant work in the interest of reproducibility. If separate parameters are used for separate sets of data, a table including the datasets (e.g., participant numbers) and the parameters used is recommended as supplementary material.
 
 ### For more details...
-`RespGui.mlapp` calls the `gui_process.m` function, so if you would like to understand the code better, inspect the gui_process function. <br/>
+`RespGui.mlapp` calls the `gui_process.m` function, so if you would like to understand the parameters and/or code better, inspect the gui_process function. <br/>
 All constituent functions are organized under the folders 'Processing_Functions' or 'Supporting_Functions'. See function code for methodological details.
 
 ## Description of Saved Variables
