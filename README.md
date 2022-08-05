@@ -6,6 +6,7 @@ A. H. Gazi et al., "Robust Estimation of Respiratory Variability Uncovers Correl
 
 If ECG processing and heart rate variability (HRV) extraction tools are used, please also cite: <br/>
 A. Vest, et al., "An Open Source Benchmarked Toolbox for Cardiovascular Waveform and Interval Analysis", Physiological measurement, vol. 39, no. 10, 2018. <br/>
+
 Please see the original PhysioNet Cardiovascular Signal Toolbox (PCST) repository for questions specifically related to ECG processing and HRV extraction: 
 https://github.com/cliffordlab/PhysioNet-Cardiovascular-Signal-Toolbox
 
