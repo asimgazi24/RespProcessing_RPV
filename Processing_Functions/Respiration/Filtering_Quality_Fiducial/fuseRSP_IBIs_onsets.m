@@ -1,5 +1,5 @@
 function [fused_IBIs, fused_onsetTimes] = ...
-    fuseRSP_IBIs_onsets(numSignals, varargin)
+    fuseRSP_IBIs_onsets(numSignals, thresh, varargin)
 % This function takes a number of respiratory signals' IBIs and onsets
 % and fuses these according to the RQI values for each window of
 % respiration data
@@ -72,10 +72,6 @@ if ~exist('ecg_derived', 'var'); ecg_derived = false; end
 % Initialize results that we will fill via appending
 fused_IBIs = [];
 fused_onsetTimes = [];
-
-% Initialize RQI threshold for rejection
-thresh = 0.45;      % Updated as of 02/2021
-% thresh = 0.4;       % Updated as of 01/2021
 
 % What we need to do to pull off this RQI-ranking-based fusion is to
 % iterate through the windows of the RQI_windowed arrays. Since they should
